@@ -1,29 +1,30 @@
 # UCSB-GeoGuessr
 
-
-1. Tech Stack Recommendations
+Tech Stack
 
 Front-End
 
-	•	React or Next.js (React-based)
+	•	Next.js (React-based)
 	•	Why? React has a large ecosystem and many UI libraries. Next.js has built-in features like server-side rendering and file-based routing that simplify development.
 	•	Mapping/Street View/360° Imagery
-	•	Google Maps JavaScript API or Mapbox GL JS for the interactive map where users drop their guesses.
+	•	Map Options: Leaflet, Google Maps JavaScript API, Mapbox GL JS (for the interactive map where users drop their guesses)
+	•	Why Leaflet? 
+		•	Simple Needs: our application only needs basic map functionality (dropping pins and calculating distances), which Leaflet handles well.
+		•	Lightweight: Leaflet’s simplicity reduces overhead, making it faster and easier to implement.
+		•	Free and Open: No cost or licensing concerns, making it beginner-friendly and budget-friendly.
 	•	Google Street View API or Mapillary to embed 360° panoramas. If you already have your own 360° images, you could also use a custom 360° viewer (e.g., React 360 Viewer libraries).
 
 Back-End
 
-	•	Node.js (Express) or Next.js API routes if using Next.js
+	•	Next.js API routes
 	•	Manages game sessions, user data (scores, etc.), randomizing locations, etc.
-	•	Database
-	•	PostgreSQL or MongoDB to store location data, user profiles, high scores, etc.
-	•	Because your dataset (UCSB/Isla Vista) is relatively small, you could even start with a JSON file or a minimal database.
+	•	Database: PostgreSQL (to store location data, user profiles, high scores, etc)
+		•	PostgreSQL was selected for its structured data management, strong support for relational data, and advanced geospatial capabilities through the PostGIS extension, which is ideal for handling location-based queries and calculating distances in a GeoGuessr-style application. Its strict schema ensures data integrity, making it a robust choice for scaling the project in the future.
 
 Hosting / Infrastructure
-
-	•	Vercel or Netlify for hosting front-end (Next.js/React).
-	•	AWS (EC2 / S3) or Heroku for back-end services or storing 360° images.
-	•	Firebase could be an option for an all-in-one backend (authentication, real-time database) if you want to reduce DevOps overhead.
+	•	Heroku (all in one)
+	•	Vercel for hosting front-end due to being ptimized for Next.js with native support for server-side rendering (SSR), static site generation (SSG), and API routes.
+	•	Railway, Supabase, Neon.tech (Hosting databases)
 
 Additional Considerations
 
