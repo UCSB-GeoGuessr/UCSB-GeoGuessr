@@ -43,13 +43,12 @@ Front-End
 
 	•	Next.js (React-based)
 	•	Why? React has a large ecosystem and many UI libraries. Next.js has built-in features like server-side rendering and file-based routing that simplify development.
-	•	Mapping/Street View/360° Imagery
 	•	Map Options: Leaflet, Google Maps JavaScript API, Mapbox GL JS (for the interactive map where users drop their guesses)
 	•	Why Leaflet? 
 		•	Simple Needs: our application only needs basic map functionality (dropping pins and calculating distances), which Leaflet handles well.
 		•	Lightweight: Leaflet’s simplicity reduces overhead, making it faster and easier to implement.
 		•	Free and Open: No cost or licensing concerns, making it beginner-friendly and budget-friendly.
-	•	Google Street View API or Mapillary to embed 360° panoramas. If you already have your own 360° images, you could also use a custom 360° viewer (e.g., React 360 Viewer libraries).
+	•	Street View/360° Imagery: Google Street View API 
 
 Back-End
 
@@ -148,7 +147,7 @@ Phase 4: Polish & Scalability
 	•	Optimize image loading times.
 	•	Add caching layers if needed.
 	3.	Hosting & Deployment
-	•	Deploy the front-end on Vercel or Netlify.
+	•	Deploy the front-end on Vercel
 	•	Deploy the back-end on Heroku, AWS, or use Next.js serverless functions.
 	4.	Analytics & Testing
 	•	Add tools to understand how users interact with the game.
@@ -157,9 +156,9 @@ Phase 4: Polish & Scalability
 Summary
 
 	•	Tech Stack:
-	•	Front-End: React or Next.js + Map (Mapbox/Google Maps) + Street View (Google or Mapillary)
-	•	Back-End: Node.js (Express) or Next.js API routes + DB (PostgreSQL/MongoDB)
-	•	Hosting: Vercel/Netlify for front-end, AWS/Heroku/Firebase for back-end.
+	•	Front-End: Next.js + Map (Leaflet) + Street View (Google)
+	•	Back-End: Next.js API routes + DB (PostgreSQL)
+	•	Hosting: Vercel for front-end, AWS/Heroku/Firebase for back-end (not sure yet)
 	•	MVP:
 	1.	One random location from a small set.
 	2.	Show 360° view.
