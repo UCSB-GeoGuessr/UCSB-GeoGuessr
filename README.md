@@ -1,24 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
+## Running GeoGuessr Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
@@ -27,13 +15,11 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying)
 
 # UCSB-GeoGuessr
 
@@ -64,12 +50,11 @@ Hosting / Infrastructure
 
 Additional Considerations
 
-	•	Authentication: Use Auth0, Firebase Auth, or a custom OAuth if you want players to have profiles and track scores.
-	•	Analytics & Logging: Tools like Google Analytics or LogRocket for user insights (optional, but helpful to understand player behavior).
+	•	Authentication: Google Oauth?
+
 
 2. Minimum Viable Product (MVP)
 
-The simplest version of your GeoGuessr-style game could look like this:
 	1.	Randomized Location & Street View
 	•	When the user starts the game, they’re presented with a 360° panorama or static image of a random spot in Isla Vista/UCSB.
 	2.	Guess Mechanic
@@ -81,11 +66,7 @@ The simplest version of your GeoGuessr-style game could look like this:
 	4.	Play Again
 	•	Simple “Next Round” or “Play Again” button to load another random location.
 
-This MVP does not require user accounts, leaderboards, or sophisticated design. It’s purely functional: show location → guess → reveal distance.
-
 3. Steps to Achieve This
-
-Below is a general roadmap, with each phase building upon the previous.
 
 Phase 1: Set Up the Basics
 
@@ -93,7 +74,7 @@ Phase 1: Set Up the Basics
 	•	Identify a handful of key Isla Vista/UCSB locations.
 	•	For each location, gather:
 	•	The latitude/longitude coordinates.
-	•	A link to a Street View or 360° image resource (whether via Google Street View API, Mapillary, or your own images).
+	•	A link to a Street View or 360° image resource 
 	•	Store this data in a simple JSON or a small database table.
 	2.	Initialize the Front-End Project
 	•	Create a new React or Next.js app.
@@ -152,20 +133,3 @@ Phase 4: Polish & Scalability
 	4.	Analytics & Testing
 	•	Add tools to understand how users interact with the game.
 	•	Expand or refine your location set based on user feedback.
-
-Summary
-
-	•	Tech Stack:
-	•	Front-End: Next.js + Map (Leaflet) + Street View (Google)
-	•	Back-End: Next.js API routes + DB (PostgreSQL)
-	•	Hosting: Vercel for front-end, AWS/Heroku/Firebase for back-end (not sure yet)
-	•	MVP:
-	1.	One random location from a small set.
-	2.	Show 360° view.
-	3.	User drops a pin on a map.
-	4.	Display distance and a simple score.
-	•	Roadmap:
-	1.	Basic single-location flow.
-	2.	Multiple rounds & randomization.
-	3.	Authentication and leaderboards.
-	4.	Performance enhancements and UX polish.
