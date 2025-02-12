@@ -1,0 +1,32 @@
+[
+    {
+        "id": "location1",
+        "name": "Henley Gate",
+        "latitude": 34.415528,
+        "longitude": -119.838139
+    },
+    {
+        "id": "location2",
+        "name": "Engineering Trailer",
+        "latitude": 34.41587432164191,
+        "longitude": -119.843140347255
+    },
+    {
+        "id": "location3",
+        "name": "Manzanita Village",
+        "latitude": 34.40944772968115,
+        "longitude": -119.85320817230287
+    },
+    {
+        "id": "location4",
+        "name": "Breakpointe Coronado",
+        "latitude": 34.41416578161393,
+        "longitude": -119.86113477049854
+    },
+    {
+        "id": "location5",
+        "name": "Harder Stadium",
+        "latitude": 34.419970676565,
+        "longitude": -119.85379885795776
+    }
+]

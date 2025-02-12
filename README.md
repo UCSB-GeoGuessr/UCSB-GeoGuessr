@@ -40,18 +40,12 @@ Back-End
 
 	•	Next.js API routes
 	•	Manages game sessions, user data (scores, etc.), randomizing locations, etc.
-	•	Database: PostgreSQL (to store location data, user profiles, high scores, etc)
+	•	Database: PostgreSQL via Supabase (to store location data, user profiles, high scores, etc)
 		•	PostgreSQL was selected for its structured data management, strong support for relational data, and advanced geospatial capabilities through the PostGIS extension, which is ideal for handling location-based queries and calculating distances in a GeoGuessr-style application. Its strict schema ensures data integrity, making it a robust choice for scaling the project in the future.
 
 Hosting / Infrastructure
-	•	Heroku (all in one)
-	•	Vercel for hosting front-end due to being ptimized for Next.js with native support for server-side rendering (SSR), static site generation (SSG), and API routes.
-	•	Railway, Supabase, Neon.tech (Hosting databases)
-
-Additional Considerations
-
-	•	Authentication: Google Oauth?
-
+	•	Vercel for hosting front-end due to being optimized for Next.js with native support for server-side rendering (SSR), static site generation (SSG), and API routes.
+	•Supabase (Hosting databases)
 
 2. Minimum Viable Product (MVP)
 
@@ -75,7 +69,7 @@ Phase 1: Set Up the Basics
 	•	For each location, gather:
 	•	The latitude/longitude coordinates.
 	•	A link to a Street View or 360° image resource 
-	•	Store this data in a simple JSON or a small database table.
+	•	Store this data in a simple JSON or a small database table in Postgres.
 	2.	Initialize the Front-End Project
 	•	Create a new React or Next.js app.
 	•	Install necessary dependencies (e.g., npm install react-map-gl or npm install @react-google-maps/api for your map).
