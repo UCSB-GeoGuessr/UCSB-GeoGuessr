@@ -3,9 +3,8 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
-// Import the StreetView component dynamically (if needed)
 const StreetView = dynamic(() => import("@/src/components/streetview"), { ssr: false });
-const Map = dynamic(() => import("@/src/components/leaflet"), { ssr: false });
+const Leaflet = dynamic(() => import("@/src/components/leaflet"), { ssr: false });
 
 export default function GamePage() {
   const [location, setLocation] = useState(null);
@@ -27,20 +26,21 @@ export default function GamePage() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Render the StreetView component instead of an iframe */}
+      {/* Render StreetView */}
       <div className="absolute top-0 left-0 w-full h-full">
         <StreetView
           lat={location.latitude || 37.86926}
           lng={location.longitude || -122.254811}
-          heading={165}
+          heading={0}
           pitch={0}
           zoom={1}
         />
       </div>
 
       {/* Small, corner-aligned Leaflet map */}
-      <div className="absolute bottom-4 right-4 w-[300px] h-[200px] z-[999] border-2 border-white shadow-lg bg-white">
-        <Map />
+      <div className="absolute bottom-4 right-4 w-[300px] h-[200px] z-[999] border-2 border-white shadow-lg bg-white
+      origin-bottom-right transition-all duration-300 ease-in-out opacity-50 hover:opacity-100 hover:scale-[2]">
+        <Leaflet />
       </div>
     </div>
   );

@@ -3,12 +3,18 @@
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import { useState } from "react";
 import "leaflet/dist/leaflet.css";
+import L from 'leaflet';
 
-// A helper component that listens for map click events and drops a marker
-const LocationMarker = () => {
+const customIcon = L.icon({
+  iconUrl: '/UCSBGaucho.png',
+  iconSize: [21,36],
+  iconAnchor: [15,45],
+  popupAnchor: [0,-45],
+});
+
+function ClickableMarker() {
   const [position, setPosition] = useState(null);
 
-  // Register map click events using useMapEvents
   useMapEvents({
     click(e) {
       setPosition(e.latlng);
@@ -16,31 +22,27 @@ const LocationMarker = () => {
   });
 
   return position ? (
-    <Marker position={position}>
+    <Marker position={position} icon={customIcon}>
       <Popup>
-        You clicked at <br />
-        {position.lat.toFixed(4)}, {position.lng.toFixed(4)}
+        You clicked at {position.lat.toFixed(4)}, {position.lng.toFixed(4)}
       </Popup>
     </Marker>
   ) : null;
-};
+}
 
-const MapComponent = () => {
+export default function Leaflet() {
   return (
-    <MapContainer
-      center={[34.412, -119.848]}
-      zoom={14} 
-      scrollWheelZoom={true}
-      style={{ height: "500px", width: "100%" }}
-    >
+      <MapContainer
+        center={[34.412, -119.848]}
+        zoom={14}
+        scrollWheelZoom={true}
+        style={{ height: "100%", width: "100%" }}
+        >
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy; OpenStreetMap contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {/* This component handles the click event and drops a marker */}
-      <LocationMarker />
+      <ClickableMarker />
     </MapContainer>
-  );
-};
-
-export default MapComponent;
+    );
+}
