@@ -1,26 +1,3 @@
-## Running GeoGuessr Locally
-
-```bash
-npm run dev
-
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-## Deploy on Vercel
-
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-
-Check out [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying)
-
 # UCSB-GeoGuessr
 
 Tech Stack
@@ -127,3 +104,28 @@ Phase 4: Polish & Scalability
 	4.	Analytics & Testing
 	•	Add tools to understand how users interact with the game.
 	•	Expand or refine your location set based on user feedback.
+
+
+
+ ## Running GeoGuessr Locally
+
+```bash
+npm run dev
+
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+## Deploy on Vercel
+
+[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+
+Check out [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying)
